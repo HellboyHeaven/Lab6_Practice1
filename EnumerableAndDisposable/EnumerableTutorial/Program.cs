@@ -1,15 +1,17 @@
 ﻿//Your code here (above the PersonName class)
 
-public class PersonName
-{
-    public string FirstName { get; }
-    public string MiddleName { get; }
-    public string LastName { get; }
+var bond = new PersonName("James", "Bond");
+var rock = new PersonName("Dwayne", "Johnson", "Rock");
+var bebeto = new PersonName("José", "de Oliveira", "Roberto", "Gama");
 
-    public PersonName(string firstName, string lastName, string middleName = null)
-    {
-        FirstName = firstName;
-        MiddleName = middleName;
-        LastName = lastName;
-    }
-}
+foreach (var name in bond)
+    Console.Write($"{name}, ");
+Console.WriteLine();
+
+foreach (var name in rock)
+    Console.Write($"{name}, ");
+Console.WriteLine();
+
+foreach (var name in bebeto)
+    Console.Write($"{name}, ");
+Console.WriteLine();

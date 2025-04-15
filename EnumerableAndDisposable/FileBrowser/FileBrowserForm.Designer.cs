@@ -33,13 +33,15 @@
             nextButton = new Button();
             closeButton = new Button();
             openFileDialog = new OpenFileDialog();
+            previousButton = new Button();
             SuspendLayout();
             // 
             // openButton
             // 
-            openButton.Location = new Point(12, 12);
+            openButton.Location = new Point(8, 7);
+            openButton.Margin = new Padding(2, 2, 2, 2);
             openButton.Name = "openButton";
-            openButton.Size = new Size(112, 34);
+            openButton.Size = new Size(78, 20);
             openButton.TabIndex = 0;
             openButton.Text = "Open";
             openButton.UseVisualStyleBackColor = true;
@@ -47,17 +49,19 @@
             // 
             // resultTextBox
             // 
-            resultTextBox.Location = new Point(12, 60);
+            resultTextBox.Location = new Point(8, 36);
+            resultTextBox.Margin = new Padding(2, 2, 2, 2);
             resultTextBox.Multiline = true;
             resultTextBox.Name = "resultTextBox";
-            resultTextBox.Size = new Size(771, 378);
+            resultTextBox.Size = new Size(541, 228);
             resultTextBox.TabIndex = 1;
             // 
             // nextButton
             // 
-            nextButton.Location = new Point(144, 11);
+            nextButton.Location = new Point(101, 7);
+            nextButton.Margin = new Padding(2, 2, 2, 2);
             nextButton.Name = "nextButton";
-            nextButton.Size = new Size(112, 34);
+            nextButton.Size = new Size(78, 20);
             nextButton.TabIndex = 2;
             nextButton.Text = "Next";
             nextButton.UseVisualStyleBackColor = true;
@@ -65,23 +69,36 @@
             // 
             // closeButton
             // 
-            closeButton.Location = new Point(278, 11);
+            closeButton.Location = new Point(471, 7);
+            closeButton.Margin = new Padding(2, 2, 2, 2);
             closeButton.Name = "closeButton";
-            closeButton.Size = new Size(112, 34);
+            closeButton.Size = new Size(78, 20);
             closeButton.TabIndex = 3;
             closeButton.Text = "Close";
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
             // 
+            // previousButton
+            // 
+            previousButton.Location = new Point(194, 6);
+            previousButton.Name = "previousButton";
+            previousButton.Size = new Size(75, 23);
+            previousButton.TabIndex = 4;
+            previousButton.Text = "Previous";
+            previousButton.UseVisualStyleBackColor = true;
+            previousButton.Click += previousButton_Click;
+            // 
             // FileBrowserForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
+            Controls.Add(previousButton);
             Controls.Add(closeButton);
             Controls.Add(nextButton);
             Controls.Add(resultTextBox);
             Controls.Add(openButton);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FileBrowserForm";
             Text = "File Browser";
             ResumeLayout(false);
@@ -95,5 +112,6 @@
         private Button nextButton;
         private Button closeButton;
         private OpenFileDialog openFileDialog;
+        private Button previousButton;
     }
 }
